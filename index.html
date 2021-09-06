@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>All animals</h1>
+<section class='all-animals'>
+  <div class='animal'>
+    <h2>Dog</h2>
+    <p>mammal: <span class='mammal-value'>true</p>
+  </div>
+  <div class='animal'>
+    <h2>Snake</h2>
+    <p>mammal: <span class='mammal-value'>false</p>
+  </div>
+  <div class='animal'>
+    <h2>Cheetah</h2>
+    <p>mammal: <span class='mammal-value'>true</p>
+  </div>
+  <div class='animal'>
+    <h2>Turtle</h2>
+    <p>mammal: <span class='mammal-value'>false</p>
+  </div>
+  <div class='animal'>
+    <h2>Frog</h2>
+    <p>mammal: <span class='mammal-value'>false</p>
+  </div>
+  <div class='animal'>
+    <h2>Cat</h2>
+    <p>mammal: <span class='mammal-value'>true</p>
+  </div>
+  <div class='animal'>
+    <h2>Badger</h2>
+    <p>mammal: <span class='mammal-value'>true</p>
+  </div>
+</section>
+<h1>Mammals</h1>
+<section id='only-mammals'></section> 
+<button onclick="myFunction()">Seprate Mammals</button>
+
+<script>
+function myFunction() {
+  const animals = document.querySelectorAll(".animal");
+
+  animals.forEach(function(animal) {
+    const mammals = animal.querySelector(".mammal-value").innerHTML;
+    
+    if(mammals === "true") {
+    	console.log(animal);
+    	document.getElementById("only-mammals").appendChild(animal);
+    }
+  });
+}
+</script>
+
+</body>
+</html>
